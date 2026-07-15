@@ -25,7 +25,7 @@ const Signup = () => {
     // step 7
     try{
       // step 8
-      const data = new FormData
+      const data = new FormData()
 
       // step 9
       data.append("username", username);
@@ -40,7 +40,7 @@ const Signup = () => {
       setLoading("")
 
       // step 12
-      setSuccess("Congtatulations, Registration successfull")
+      setSuccess(response.data.message)
 
       //step 13
       setUsername ("");
@@ -53,12 +53,12 @@ const Signup = () => {
       // step 14
       setLoading("")
 
-      setError("Ooops.... check your details. Please try again.")
+      setError(error.message)
     }
   }
   return (
     <div className="row justify-content-center mt-4">
-      <div className="col-md-6 card p-4">
+      <div className="col-md-6 card p-4 shadow">
         <h2>Signup</h2>
         <h4 className="text-info">{loading}</h4>
         <h4 className="text-success">{success}</h4>
