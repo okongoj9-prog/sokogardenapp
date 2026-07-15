@@ -35,7 +35,7 @@ const Signin = () => {
       data.append("password", password)
 
       // step 10
-      const response = await axios("https://billylanson.alwaysdata.net/api/signin", data)
+      const response = await axios.post("https://billylanson.alwaysdata.net/api/signin", data)
 
       // step 11
       setLoading("");
@@ -71,9 +71,9 @@ const Signin = () => {
       <div className='col-md-6 shadow p-4'>
         <form onSubmit={handleSubmit}>
           <h2>Signin</h2>
-          <h3 className='text-info'>{loading}</h3>
-          
-          
+          <h4 className="text-danger">{message}</h4>
+          <h4 className="text-danger">{error}</h4>
+          <h3 className="text-info">{loading}</h3>
           <input type="email"
           placeholder='Enter the email Address'
           className='form-control'
