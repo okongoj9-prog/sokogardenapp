@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -104,6 +105,8 @@ const Signup = () => {
           <input type="submit"
           value="Signup"
           className='btn btn-info' />
+
+          <p>Already have an accont? <Link to="/signin">Login</Link></p>
         </form>
       </div>
     </div>
