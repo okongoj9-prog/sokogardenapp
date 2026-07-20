@@ -6,7 +6,7 @@ const Addproducts = () => {
   const [product_name, setProductName] = useState("");
   const [product_decription, setProductDesction] = useState("");
   const [product_cost, setProductCost] = useState("");
-  const [product_category, setProductCategory] = useState("phone");
+  const [product_category, setProductCategory] = useState("");
   const [product_photo, setProductPhoto] = useState("");
 
   // step 4
@@ -105,6 +105,7 @@ const Addproducts = () => {
         <select className='form-control'
         value={product_category}
         onChange={(e) => setProductCategory(e.target.value)}>
+          <option value="NAN">Choose a category</option>
           <option value="phone">Phone</option>
           <option value="Tv">Tv</option>
           <option value="Laptop">Laptop</option>

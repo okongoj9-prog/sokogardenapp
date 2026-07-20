@@ -7,6 +7,7 @@ import Getproducts from './Components/Getproducts';
 import Addproducts from './Components/Addproducts';
 import Notfound from './Components/Notfound';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Makepayment from './Components/Makepayment';
 function App() {
   return(
     <Router>
@@ -26,6 +27,7 @@ function App() {
           <Route path='/Signin' element={(<Signin />)} />
           <Route path='/' element={(<Getproducts />)} />
           <Route path='/Addproducts' element={(<Addproducts />)} />
+          <Route path='/makepayment' element={(<Makepayment />)} />
           <Route path='*' element={(<Notfound />)} />
         </Routes>
       </div>
